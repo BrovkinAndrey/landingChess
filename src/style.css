@@ -348,7 +348,7 @@ header {
 }
 
 #players {
-  margin-bottom: 140px;
+  margin-bottom: 135px;
 }
 
 .header-players {
@@ -395,6 +395,7 @@ header {
 .players-slider {
   display: flex;
   justify-content: space-around;
+  overflow: hidden;
   gap: 20px;
 }
 
