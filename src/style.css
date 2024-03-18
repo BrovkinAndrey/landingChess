@@ -13,7 +13,7 @@ main {
   height: 700px;
   padding-top: 26px;
   background-image: url(/img/background.png);
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -27,7 +27,8 @@ header {
 }
 
 .main-content {
-  width: 542px;
+  max-width: 542px;
+  margin-bottom: 132px;
 }
 
 .main-titles {
@@ -348,7 +349,7 @@ header {
 }
 
 #players {
-  margin-bottom: 135px;
+  margin-bottom: 139px;
 }
 
 .header-players {
@@ -426,7 +427,7 @@ header {
   line-height: 120%;
   font-style: normal;
   color: #313131;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .player-more {
@@ -460,4 +461,60 @@ footer {
   line-height: 120%;
   font-style: normal;
   color: #313131;
+}
+
+@media (max-width: 1150px) {
+  .main-content {
+    margin-bottom: 132px;
+  }
+
+  .main-titles {
+    margin: 0 auto;
+    width: max-content;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .main-text {
+    margin-bottom: 25px;
+  }
+
+  .main-btns {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .support-title {
+    font-size: 28px;
+  }
+
+  .support-table,
+  .support-text {
+    font-size: 18px;
+  }
+
+  .second-sect-img img {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 44px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .two-col {
+    padding-right: 120px;
+  }
+
+  .step-text {
+    font-size: 18px;
+  }
+
+  .img-plain {
+    bottom: 130px;
+  }
 }

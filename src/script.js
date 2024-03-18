@@ -8,42 +8,60 @@ let startSlideIdx = 0;
 
 leftPlayerButton.addEventListener('click', () => {
   startSlideIdx = (startSlideIdx - 1 + countPlayers) % countPlayers;
-  updateSlider();
+  updatePlayerSlider();
 });
 
 rightPlayerButton.addEventListener('click', () => {
   startSlideIdx = (startSlideIdx + 1) % countPlayers;
-  updateSlider();
+  updatePlayerSlider();
 });
 
-function updateSlider() {
+function updatePlayerSlider() {
   currentPlayer.innerHTML = startSlideIdx + 1;
+  const widthWindow = document.documentElement.clientWidth;
 
   for (let i = 0; i < countPlayers; i++) {
-    if (i === startSlideIdx) {
-      const secondSlide = (i + 1) % countPlayers;
-      const thirdSlide = (i + 2) % countPlayers;
-      playerSlides[i].style.cssText = `
-        display: flex;
-        order: 0;
-      `;
-      playerSlides[secondSlide].style.cssText = `
-        display: flex;
-        order: 1;
-      `;
-      playerSlides[thirdSlide].style.cssText = `
-        display: flex;
-        order: 2;
-      `;
-      i += 2;
+    const secondSlide = (i + 1) % countPlayers;
+    const thirdSlide = (i + 2) % countPlayers;
+    if (widthWindow <= 1150) {
+      if (i === startSlideIdx) {
+        playerSlides[i].style.cssText = `
+          display: flex;
+          order: 0;
+        `;
+        playerSlides[secondSlide].style.cssText = `
+          display: flex;
+          order: 1;
+        `;
+        i += 1;
+      } else {
+        playerSlides[i].style.display = 'none';
+      }
     } else {
-      playerSlides[i].style.display = 'none';
+      if (i === startSlideIdx) {
+        playerSlides[i].style.cssText = `
+          display: flex;
+          order: 0;
+        `;
+        playerSlides[secondSlide].style.cssText = `
+          display: flex;
+          order: 1;
+        `;
+        playerSlides[thirdSlide].style.cssText = `
+          display: flex;
+          order: 2;
+        `;
+        i += 2;
+      } else {
+        playerSlides[i].style.display = 'none';
+      }
     }
   }
 }
 
-updateSlider();
+updatePlayerSlider();
+
 let autoSlide = setInterval(() => {
   startSlideIdx = (startSlideIdx + 1) % countPlayers;
-  updateSlider();
+  updatePlayerSlider();
 }, 4000);
