@@ -23,7 +23,16 @@ function updatePlayerSlider() {
   for (let i = 0; i < countPlayers; i++) {
     const secondSlide = (i + 1) % countPlayers;
     const thirdSlide = (i + 2) % countPlayers;
-    if (widthWindow <= 1150) {
+    if (widthWindow < 810) {
+      if (i === startSlideIdx) {
+        playerSlides[i].style.cssText = `
+          display: flex;
+          order: 0;
+        `;
+      } else {
+        playerSlides[i].style.display = 'none';
+      }
+    } else if (widthWindow < 1150) {
       if (i === startSlideIdx) {
         playerSlides[i].style.cssText = `
           display: flex;

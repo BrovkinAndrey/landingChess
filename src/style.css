@@ -10,7 +10,7 @@ html {
 
 main {
   width: 100%;
-  height: 700px;
+  min-height: 700px;
   padding-top: 26px;
   background-image: url(/img/background.png);
   background-position: center center;
@@ -69,7 +69,7 @@ header {
 .main-btn {
   width: 263px;
   height: 72px;
-  border: 2px black solid;
+  border: 2px #1f1f1f solid;
   border-radius: 36px;
   font-family: 'Golos Text', sans-serif;
   font-size: 16px;
@@ -178,7 +178,7 @@ header {
   text-transform: uppercase;
 }
 
-.support-title > span {
+.support-theme {
   font-weight: 700;
   color: #f54932;
 }
@@ -307,12 +307,12 @@ header {
   background-image: url(/img/backgroundPaper.png);
 }
 
-.two-row {
+.num-three {
   grid-column: 3;
   grid-row: 1 / 3;
 }
 
-.two-col {
+.num-seven {
   grid-column: 2 / 4;
   grid-row: 3;
   padding-right: 320px;
@@ -506,7 +506,7 @@ footer {
     font-size: 18px;
   }
 
-  .two-col {
+  .num-seven {
     padding-right: 120px;
   }
 
@@ -516,5 +516,95 @@ footer {
 
   .img-plain {
     bottom: 130px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .num-three {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+
+  .num-six {
+    grid-column: 1 / 3;
+    padding-right: 50%;
+  }
+
+  .num-seven {
+    grid-column: 1 / 3;
+    grid-row: auto;
+    padding-right: 20px;
+  }
+
+  .img-plain {
+    bottom: 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    background-image: url(/img/mobileBack.png);
+    padding-bottom: 300px;
+  }
+
+  .main-content {
+    margin: 0 auto;
+  }
+
+  .container {
+    margin: 0 42px;
+  }
+
+  .main-btn {
+    width: 100%;
+  }
+
+  .white-btn {
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  .white-btn:hover {
+    border-color: #1f1f1f;
+  }
+
+  .hide-br {
+    display: none;
+  }
+
+  .first-sect-support {
+    position: relative;
+  }
+
+  .first-support-title {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+  }
+
+  .first-sect-img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .second-sect-support {
+    flex-direction: column;
+  }
+
+  .img-plain {
+    right: -42px;
+  }
+
+  footer {
+    padding-bottom: 40px;
   }
 }
