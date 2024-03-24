@@ -36,7 +36,8 @@
     <main>
       <div class="container">
         <header>
-          <div class="logo"><img src="/img/logo.svg" alt="логотип" /></div>
+          <div class="logo main-logo"><img src="/img/logo.svg" alt="логотип" /></div>
+          <div class="logo mobile-logo"><img src="/img/mobileLogo.png" alt="логотип" /></div>
         </header>
         <div class="main-content">
           <div class="main-titles">
@@ -48,7 +49,7 @@
             <h1 class="main-title-3">земного шара</h1>
           </div>
           <p class="main-text">
-            Оплатите взнос на телеграммы для организации Международного
+            Оплатите взнос на телеграммы <br class="add-br"> для организации Международного
             васюкинского турнира по шахматам
           </p>
           <div class="main-btns">
@@ -112,8 +113,8 @@
           <div class="second-sect-content">
             <h3 class="support-title second-sect-title">
               и Сеанс
-              <span>одновременной игры в шахматы на 160 досках</span>
-              гроссмейстера О. Бендера
+              <span class="support-theme">одновременной игры в шахматы на 160 досках</span>
+              гроссмейстера <br class="add-br"> О. Бендера
             </h3>
             <table class="support-table">
               <tr>
@@ -142,10 +143,32 @@
                 </td>
               </tr>
             </table>
+            <div class="support-info">
+                <div class="info-item">
+                  <p class="key">Место проведения: </p>
+                  <p class="value">Клуб «Картонажник»</p>
+                </div>
+                <div class="info-item">
+                  <p class="key">Дата и время мероприятия: </p>
+                  <p class="value">22 июня 1927 г. в 18:00</p>
+                </div>
+                <div class="info-item">
+                  <p class="key">Стоимость входных билетов: </p>
+                  <p class="value">20 коп.</p>
+                </div>
+                <div class="info-item">
+                  <p class="key">Плата за игру: </p>
+                  <p class="value">50 коп.</p>
+                </div>
+                <div class="info-item">
+                  <p class="key last-p">Взнос на телеграммы: </p>
+                  <p class="value last-p"><span class="line-through"><span 
+                    class="strikethrough">100 руб.</span></span>21 руб. 16 коп.</p>
+                </div>
+            </div>
             <p class="support-text">
               По всем вопросам обращаться в администрацию к К. Михельсону
             </p>
-          </div>
         </div>
       </div>
     </section>
@@ -207,21 +230,78 @@
           </div>
           <img src="/img/plain.png" alt="самолет" class="img-plain" />
         </div>
+        <div class="steps-slider">
+          <div class="step-slide">
+            <div class="step">
+              <p class="num">1</p>
+              <p class="step-text">Строительство железнодорожной магистрали Москва-Васюки</p>
+            </div>
+            <div class="step">
+              <p class="num">2</p>
+              <p class="step-text">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</p>
+            </div>
+          </div>
+          <div class="step-slide">
+            <div class="step">
+              <p class="num">3</p>
+              <p class="step-text">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+            </div>
+          </div>
+          <div class="step-slide">
+            <div class="step">
+              <p class="num">4</p>
+              <p class="step-text">Строительство дворца для турнира</p>
+            </div>
+            <div class="step">
+              <p class="num">5</p>
+              <p class="step-text">Размещение гаражей для гостевого автотранспорта</p>
+            </div>
+          </div>
+          <div class="step-slide">
+            <div class="step">
+              <p class="num">6</p>
+              <p class="step-text">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</p>
+            </div>  
+          </div>
+          <div class="step-slide">
+            <div class="step">
+              <p class="num">7</p>
+              <p class="step-text">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</p>
+            </div>
+          </div>
+          <img src="/img/plain.png" alt="самолет" class="img-plain big-plain" />
+          <img src="/img/plainMobile.png" alt="самолет" class="img-plain small-plain" />
+        </div>
+        <div class="steps-switch">
+          <button class="left-switch step-left-switch">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+          </button>
+          <div class="select-step">
+            <div class="step-point"></div>
+            <div class="step-point"></div>
+            <div class="step-point"></div>
+            <div class="step-point"></div>
+            <div class="step-point"></div>
+          </div>
+          <button class="right-switch step-right-switch">
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </section>
     <section id="players">
       <div class="container">
         <div class="header-players">
           <h2 class="section-title">Участники турнира</h2>
-          <div class="player-switch">
-            <button class="left-switch">
+          <div class="player-switch header-player-switch">
+            <button class="left-switch player-left-switch">
               <i class="fa-solid fa-circle-chevron-left"></i>
             </button>
             <p class="num-players">
               <span class="current-player">3</span
               ><span class="all-players"> / 6</span>
             </p>
-            <button class="right-switch">
+            <button class="right-switch player-right-switch">
               <i class="fa-solid fa-circle-chevron-right"></i>
             </button>
           </div>
@@ -291,6 +371,18 @@
             <button class="player-more">Подробнее</button>
           </div>
         </div>
+        <div class="player-switch bottom-player-switch">
+          <button class="left-switch bottom-player-left-switch">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+          </button>
+          <p class="num-players">
+            <span class="bottom-current-player">3</span
+            ><span class="all-players"> / 6</span>
+          </p>
+          <button class="right-switch bottom-player-right-switch">
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </section>
     <div class="marquee">
@@ -321,9 +413,9 @@
     <footer>
       <div class="container">
         <p class="text-footer">
-          Все персонажи, события и цитаты являются вымышленными и не принадлежат
-          создателям сайта. С подробностями можно познакомиться в главе XXXIV
-          романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+          Все персонажи, события и цитаты являются вымышленными <br class="add-br"> и не принадлежат
+          создателям сайта.<br class="add-br"> С подробностями можно познакомиться <br class="add-br"> в главе XXXIV
+          романа Ильи Ильфа <br class="add-br"> и Евгения Петрова «Двенадцать стульев».
         </p>
       </div>
     </footer>
