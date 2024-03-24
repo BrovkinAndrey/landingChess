@@ -12,7 +12,7 @@ main {
   width: 100%;
   min-height: 700px;
   padding-top: 26px;
-  background-image: url(/img/background.png);
+  background-image: url(../img/background.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -317,7 +317,7 @@ header {
   display: flex;
   gap: 16px;
   padding: 20px;
-  background-image: url(/img/backgroundPaper.png);
+  background-image: url(../img/backgroundPaper.png);
 }
 
 .num-three {
@@ -573,7 +573,7 @@ footer {
 
 @media (max-width: 900px) {
   main {
-    background-image: url(/img/mobileBack.png);
+    background-image: url(../img/mobileBack.png);
     padding-bottom: 300px;
   }
 
@@ -663,7 +663,7 @@ footer {
     min-height: 300px;
     gap: 28px;
     padding: 62px 20px 20px 20px;
-    background-image: url(/img/backgroundPaper.png);
+    background-image: url(../img/backgroundPaper.png);
   }
 
   .step {
